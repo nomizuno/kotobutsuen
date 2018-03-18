@@ -37,4 +37,12 @@ class User < ApplicationRecord
 
   end
 
+  has_attached_file :avatar,
+                    styles: { medium: '300×300>',thumb: '100×100>'},
+                    default_url: '/default_user.jpg'
+
+  validates_attachment_content_type :avatar,
+                                  content_type: /image/
+
+
 end
