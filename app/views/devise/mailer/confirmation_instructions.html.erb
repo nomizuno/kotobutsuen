@@ -1,0 +1,5 @@
+<p>”ことぶつえん”へようこそ！ <%= @email %>!</p>
+
+<p>下のリンクをクリックしてアカウントの認証を行ってね！</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
