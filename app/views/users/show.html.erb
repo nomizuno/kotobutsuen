@@ -1,0 +1,52 @@
+
+<div class ="main user-show">
+	<div class ="container">
+
+		<div class ="user">
+			 <%= image_tag current_user.avatar.url, class: "border rounded w-25" %>
+			<h2>@<%= @user.name %></h2>
+			<div class ="user-edit-bottun">
+			  <% if user_signed_in? %>
+				<% if @user.id == current_user.id %>
+				<p><%= @user.email %></p>
+				<%= link_to("編集","/users/edit") %>
+				<% end %>
+			<% end %>
+			</div>
+			<p>ことば投稿数&nbsp<span class ="count"><%= @post_count %></span></p>
+			<p>意味投稿数&nbsp<span class ="count"><%= @comments_count %></span></p>
+
+		</div>
+
+        <ul class="user-tabs">
+			<li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
+
+		</ul>
+
+		<% @comments.each do |comment| %>
+		<div class="comments-index-item">
+			<% @post = Post.find_by(id: comment.post_id) %>
+			<div class = "user-left" >
+				<div class ="post-word">
+                    <%=link_to(@post.reading, "/posts/#{@post.id}") %>
+					【<%=link_to(@post.content, "/posts/#{@post.id}") %>】
+
+
+
+				</div>
+			</div>
+
+			<div class ="user-right" >
+				<%= link_to(comment.content,"/posts/#{comment.post_id}") %>
+
+			</div>
+
+
+		</div>
+		<% end %>
+
+
+
+	</div>
+
+</div>
