@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   post "comments/:id/create" => "comments#create"
   post "comments/:id/destroy" => "comments#destroy"
 
+  post "likes/:comment_id/create" => "likes#create"
+  post "likes/:comment_id/destroy" => "likes#destroy"
+
 end
