@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :name,
             presence: true,
             uniqueness: {case_sensitive: false }
-  validates_format_of :name, with: /^[a-zA-Z0-9_¥.]^/, multiline: true
+
   validate :validate_name
 
   attr_accessor :login
