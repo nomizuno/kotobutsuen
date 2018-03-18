@@ -1,0 +1,75 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* post/show ================================ */
+
+
+.posts-show-item{
+
+   max-width: 600px;
+  margin: 0 auto;
+  margin-top:50px;
+
+
+
+  .post-word{
+   width:600px;
+
+    text-align:center;
+  }
+
+  .posts-comments{
+    width:600px;
+
+   padding: 0.2em 1em;
+    margin: 0.1em 0;
+    color: #232323;
+
+    border-left: solid 10px #ffc06e;
+
+  }
+
+
+
+}
+
+.form-body{
+	margin:100px 0;
+}
+
+
+.fa-angle-double-down{
+   size:7x;
+}
+
+/* post/index ================================ */
+
+.posts-index-item{
+ padding: 0.2em 1em;
+    margin: 0.1em 0;
+    color: #232323;
+
+    border-left: solid 10px #ffc06e;
+
+
+}
+
+
+/* いいね!ボタン =================================== */
+
+
+.like-btn {
+  color: red;
+}
+
+.like-btn-unlike {
+  color: gray;
+}
+
+
+ .Induction{
+  width:200%;
+  float:left;
+
+}
