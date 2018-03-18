@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   get "posts/:id/all" => "posts#show_all"
   get "posts/:id/edit" => "posts#edit"
 
+  post "comments/:id/create" => "comments#create"
+  post "comments/:id/destroy" => "comments#destroy"
+
 end
