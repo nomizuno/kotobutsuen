@@ -1,14 +1,98 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <title>Kotobutsuen</title>
-    <%= csrf_meta_tags %>
+<head>
+	<title>ことぶつえん</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+	<!-- /jQueryを読み込む -->
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-  <body>
-    <%= yield %>
-  </body>
+
+
+
+</head>
+
+
+<body>
+  <header>
+    <div class="header-logo">
+      <%= link_to("ことぶつえん","/") %>
+    </div>
+
+    <ul class="header-menus">
+
+      <li>
+        <div id="nav-search">
+          <%= form_tag '/posts/index', :method => 'get' do %>
+          <p>
+            <%= text_field_tag :search ,params[:search] %>
+
+            <%= submit_tag "検索", :name => nil %>
+          </p>
+          <% end %>
+        </div><!-- nav-search -->
+      </li>
+
+      <li>
+        <%= link_to("使い方","/about") %>
+      </li>
+
+      <li>
+        <%= link_to("索引","/posts/index") %>
+      </li>
+
+
+
+      <li>
+        <%= link_to("ことば投稿","/posts/new") %>
+      </li>
+
+
+      <li>
+
+
+      </li>
+
+    <% if user_signed_in? %>
+    <li>
+      <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    </li>
+
+    <li>
+      <%= link_to("マイページ",  "/users/#{current_user.id}" ) %></p>
+    </li>
+    <% else %>
+    <li>
+     <p><%= link_to "ログイン", "/users/sign_in" %></p>
+   </li>
+   <li>
+     <p><%= link_to "新規登録", "/users/sign_up" %></p>
+   </li>
+  <% end %>
+
+  </ul>
+
+</header>
+
+
+ <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+<% if flash[:notice] %>
+<div class ="flash">
+  <%= flash[:notice] %>
+</div>
+<% end %>
+
+<%= yield %>
+
+
+<footer>
+
+</footer>
+
+</body>
 </html>
