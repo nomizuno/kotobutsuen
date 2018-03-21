@@ -36,6 +36,10 @@ gem 'sqlite3', group: :development
 gem 'pg', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+
+gem 'kaminari'
+
 group :test do
   gem 'rspec-rails'
 
