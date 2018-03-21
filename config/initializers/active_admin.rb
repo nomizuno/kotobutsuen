@@ -55,7 +55,10 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # within the application controller.
    config.authentication_method = :authenticate_admin_user!
-
+   config.clear_stylesheets!
+   config.register_stylesheet "admin/active_admin.css"
+   config.clear_javascripts!
+   config.register_javascript "admin/active_admin.js"
   # == User Authorization
   #
   # Active Admin will automatically call an authorization
