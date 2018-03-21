@@ -40,6 +40,8 @@ gem 'pg', group: :production
 
 gem 'kaminari'
 
+gem 'activeadmin'
+
 group :test do
   gem 'rspec-rails'
 
