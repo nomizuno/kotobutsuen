@@ -1,6 +1,6 @@
 <div class="main users-login">
   <div class="container">
-    <h2> <%= resource_name.to_s.humanize %>編集</h2>
+    <h2> ユーザー編集</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
@@ -11,18 +11,18 @@
 
      <div class= "form-group">
 
-       <%= f.label :avatar %><br />
+       <%= f.label "ユーザー画像" %><br />
        <%= f.file_field :avatar %>
 
     </div>
     <div class="field">
-      <%= f.label :name %><br />
+      <%= f.label "メールアドレス" %><br />
       <%= f.text_field :name, class: "form-control col-md-5 col-sm",
-          placeholder: "Username" ,autocomplete: "Username"%>
+          autocomplete: "Username"%>
     </div>
 
     <div class="field">
-      <%= f.label :email %><br />
+      <%= f.label "メールアドレス" %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
@@ -31,21 +31,21 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :password %> <i>(変更しない場合は空欄にしてください。)</i><br />
+      <%= f.label "変更後パスワード" %> <i>(変更しない場合は空欄にしてください。)</i><br />
       <%= f.password_field :password, autocomplete: "off" %>
       <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em><%= @minimum_password_length %>文字以上は必要</em>
       <% end %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label "変更後パスワード再入力" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
     <div class="field">
-      <%= f.label :current_password %> </br>
+      <%= f.label "現在のパスワード" %> </br>
       <i>(変更を反映するにはパスワードを入力してください。)</i><br/>
       <%= f.password_field :current_password, autocomplete: "off" %>
     </div>

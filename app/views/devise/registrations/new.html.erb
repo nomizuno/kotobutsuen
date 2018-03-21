@@ -6,19 +6,20 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, class: "form-control col-md-5 col-sm",
-          placeholder: "Username" %>
+      <%= f.label "ユーザー名" %><br />
+      <%= f.text_field :name, class: "form-control col-md-5 col-sm"
+          %>
     </div>
 
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.label "メールアドレス" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email"
+     %>
     </div>
 
 
     <div class="field">
-      <%= f.label :password %>
+      <%= f.label "パスワード" %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> 文字以上)</em>
       <% end %><br />
@@ -26,7 +27,7 @@
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label  "パスワード(再入力)" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
