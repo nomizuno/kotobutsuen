@@ -37,6 +37,7 @@ gem 'pg', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'sidekiq'
 
 gem 'kaminari'
 
