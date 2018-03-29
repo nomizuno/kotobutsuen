@@ -6,12 +6,10 @@
 	<%= stylesheet_link_tag    'main/application', media: 'all', 'data-turbolinks-track' => true %>
 
 	<!-- /jQueryを読み込む -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<%= javascript_include_tag 'main/application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-
-
 
 </head>
 
@@ -20,61 +18,58 @@
   <header>
     <div class="header-logo">
       <%= link_to("ことぶつえん","/") %>
-    </div>
-
-    <ul class="header-menus">
+    <nav class="g-nav">
+    <div>
+    <ul class="menu">
 
       <li>
-        <div id="nav-search">
-          <%= form_tag '/posts/index', :method => 'get' do %>
-          <p>
-            <%= text_field_tag :search ,params[:search] %>
-
-            <%= submit_tag "検索", :name => nil %>
-          </p>
-          <% end %>
-        </div><!-- nav-search -->
+        <%= link_to("ことぶつえんとは","/about",class:"menu-item") %>
       </li>
 
       <li>
-        <%= link_to("ことぶつえんとは","/about") %>
+        <%= link_to("索引","/posts/index",class:"menu-item") %>
       </li>
 
       <li>
-        <%= link_to("索引","/posts/index") %>
-      </li>
-
-
-
-      <li>
-        <%= link_to("ことば投稿","/posts/new") %>
-      </li>
-
-
-      <li>
-
-
+        <%= link_to("ことば投稿","/posts/new",class:"menu-item") %>
       </li>
 
     <% if user_signed_in? %>
     <li>
-      <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+      <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"menu-item"%></p>
     </li>
 
     <li>
-      <%= link_to("マイページ",  "/users/#{current_user.id}" ) %></p>
+      <%= link_to("マイページ",  "/users/#{current_user.id}",class:"menu-item") %></p>
     </li>
     <% else %>
     <li>
-     <p><%= link_to "ログイン", "/users/sign_in" %></p>
+     <p><%= link_to "ログイン", "/users/sign_in",class:"menu-item" %></p>
    </li>
    <li>
-     <p><%= link_to "新規登録", "/users/sign_up" %></p>
+     <p><%= link_to "新規登録", "/users/sign_up",class:"menu-item" %></p>
    </li>
   <% end %>
 
   </ul>
-
+  </nav>
+  <div class="sp-menu">
+    <a href="#" class="menu-trigger" onclick="return false;">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+<!-- /ハンバーガーjava開始 -->
+  <script type="text/javascript">
+    $(function() {
+    $('.menu-trigger').click(function() {
+        $(this).toggleClass('active');
+        $('.g-nav').slideToggle(400);
+    });
+});
+  </script>
+<!-- /ハンバーガーjava終了 -->
 </header>
 
 
