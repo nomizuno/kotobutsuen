@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.5'
 # Use Puma as the app server
 
 gem 'paperclip', '~> 5.2.0'
+gem 'aws-sdk', '~> 2.3' 
 
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
