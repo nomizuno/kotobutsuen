@@ -1,12 +1,12 @@
 <div class="main posts-new">
 	<div class="container">
-		<h1 class="form-heading">知りたい”ことば”を投稿する</h1>
+		<h1 class="form-heading">知りたい”ことば”を<br>投稿する</h1>
 		<% if user_signed_in? %>
 		  <%= form_tag("/posts/create")do %>
 		    <div class="form">
 			  <div class="form-body">
 			    <% @post.errors.full_messages.each do |message| %>
-				<div class="form_error">
+				<div class="form-error">
 					<%= message %>
 				</div>
 				<% end %>
@@ -14,7 +14,7 @@
 				<input name="content" value ="<%= @post.content %>">
 				<p>読み方</p>
 				<input name = "reading" value = "<%= @post.reading %>">
-				<input type ="submit" value="投稿">
+				<input type ="submit" value="投稿" class="submit-btn">
 			  </div>
 		   </div>
 		<% end %>

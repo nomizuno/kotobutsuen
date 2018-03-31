@@ -1,5 +1,5 @@
 <div class ="main posts-show">
-	<div class ="show-contaniner">
+	<div class ="container">
 		<div class ="posts-show-item">
 			<div class ="post-word">
 				<h3>
@@ -30,7 +30,7 @@
 					 <% @likes_count = Like.where(comment_id: comment.id).count %>
 					 <%= @likes_count %>
 					<% if comment.user_id == current_user.id %>
-					<%= link_to("削除","/comments/#{comment.id}/destroy",{method:"post"}) %>
+					<%= link_to "投稿を削除","/comments/#{comment.id}/destroy",method:"post",class:'delete_comment' %>
 					<% end %>
 					<% else %>
 					<%= link_to("/users/sign_in") do %>
@@ -42,15 +42,7 @@
 				</div>
 			</div>
 			<% end %>
-			<div >
-				<!-- <%= link_to("/posts/#{@post.id}/all") do %> -->
-				<!-- <i class="fa fa-angle-double-down"></i> -->
-				<!-- <% end %> -->
-
-
-			</div>
 		</div>
-	</div>
 <div class = "page">
  <%= paginate @comments %>
 </div>
@@ -71,6 +63,6 @@
 		<%= link_to("投稿してみる?","/users/sign_in") %>
 	</div>
 	<% end %>
-
+  </div>
 
 </div>
