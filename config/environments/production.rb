@@ -77,7 +77,16 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  
+  config.paperclip_defaults = {
+    strage: :s3,
+    bucket: ENV['S3_BUCKET'],
+    s3_region:  ENV['S3_REGION'],
+    s3_host_name: 's3-ap-northeast-1.amazonaws.com',
+    s3_credentials: {
+      access_key_id: ENV['S3_ACCESS_KEY'],
+      secret_access_key: ENV['S3_SECRET_KEY']
+    }
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

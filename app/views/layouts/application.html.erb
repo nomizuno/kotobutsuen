@@ -73,11 +73,12 @@
 </header>
 
 
- <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+
 
 <% if flash[:notice] %>
 <div class ="flash">
+	  <p class="alert"><%= alert %></p>
   <%= flash[:notice] %>
 </div>
 <% end %>
