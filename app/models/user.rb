@@ -8,7 +8,8 @@ class User < ApplicationRecord
 
   validates :name,
             presence: true,
-            uniqueness: {case_sensitive: false }
+            uniqueness: {case_sensitive: false },
+            length: {maximum: 10}
 
   validate :validate_name
 
