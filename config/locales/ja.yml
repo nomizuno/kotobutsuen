@@ -209,3 +209,10 @@ ja:
       user:
         name:名前
         
+  views:
+    pagination:
+      first: "<<"
+      last: ">>"
+      previous: "<"
+      next: ">"
+        
