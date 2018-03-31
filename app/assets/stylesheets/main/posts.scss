@@ -2,21 +2,77 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* posts/new ================================ */
+.posts-new{
+	.container{
+		text-align: center;
+		.form{
+			.form-body{
+				.form-error{
+				}
+				p{
+					font-size: 30px;
+					line-height:50px;
+					display:inline-block;
+				}
+				input{
+					width:70%;
+					border-style:none;
+					line-height: 50px;
+					font-size: 30px;
+					border:solid 1px black;
+					margin-bottom:20px;
+				}
+				.submit-btn{
+					width:90%;
+					margin-top:10px;
+					font-size:25px;
+					background-color:rgba(104,210,42,0.81);
+					border:none;
+					color: white;
+				}
+			}
+		}
+		.Induction{
+		}
+	}
+}
 /* post/show ================================ */
-
+.posts-show{
+	.container{
+		.posts-show-item{
+			.post-word{}
+			.posts-comments{
+				.post-like{}
+			}
+		}
+		.page{}
+		.comment-form{
+			.comment-body{}
+		}
+		.Induction{}
+	}
+}
 
 .posts-show-item{
 
    max-width: 600px;
   margin: 0 auto;
-  margin-top:50px;
+  margin-top:60px;
 
 
 
   .post-word{
-   width:600px;
-
-    text-align:center;
+	  text-align:center;
+	  h3{
+		  font-size:20px;
+		  line-height: 20px;
+		  padding-bottom: 5px;
+	  }
+	  h2{
+		  font-size:30px;
+		  line-height: 30px;
+	  }
   }
 
   .posts-comments{
@@ -26,7 +82,7 @@
     margin: 0.1em 0;
     color: #232323;
 
-    border-left: solid 10px #ffc06e;
+    border-left: solid 10px rgba(104,210,42,0.81);
 
   }
 
@@ -60,7 +116,7 @@
     margin: 0.1em 0;
     color: #232323;
 
-    border-left: solid 10px #ffc06e;
+    border-left: solid 10px rgba(104,210,42,0.81);
 
 
 }
@@ -76,10 +132,46 @@
 .like-btn-unlike {
   color: gray;
 }
-
+.delete_comment{
+	margin-left:30px;
+	font-size:12px;
+	&:hover{
+		color:red;
+	}
+}
 
  .Induction{
   width:200%;
   float:left;
+
+}
+/* ▼タブレット用デザインとして付け足すデザイン ================================ */
+@media all and (min-width:768px){
+/* posts/new ================================ */
+.posts-new{
+	.container{
+		.form{
+			.form-body{
+				.form-error{
+				}
+				p{
+				}
+				input{
+				}
+				.submit-btn{
+					transition:0.5s;
+					&:hover{
+						background-color:rgba(29,153,115,1.00);
+					}
+				}
+			}
+		}
+		.Induction{
+		}
+	}
+}
+}
+/* ▼PC用デザインとして付け足すデザイン ================================ */
+@media all and (min-width:920px){
 
 }
