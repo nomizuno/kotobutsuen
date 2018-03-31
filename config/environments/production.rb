@@ -78,7 +78,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.paperclip_defaults = {
-    strage: :s3,
+    storage: :s3,
     bucket: ENV['S3_BUCKET'],
     s3_region:  ENV['S3_REGION'],
     s3_host_name: 's3-ap-northeast-1.amazonaws.com',
