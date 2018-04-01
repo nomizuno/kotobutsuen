@@ -166,18 +166,30 @@
 
 
 /* post/index ================================ */
-
-.posts-index-item{
- padding: 0.2em 1em;
-    margin: 0.1em 0;
-    color: #232323;
-
-    border-left: solid 10px rgba(104,210,42,0.81);
-
-
+.posts-index{
+	.container{
+		.user-tabs{
+			margin-bottom: 20px;
+			li{
+				display: inline-block;
+				margin:0px 10px;
+			}
+			a{
+				font-size:30px;
+				line-height: 30px;
+			}
+		}
+		.posts-index-item{
+			padding: 0.2em 1em;
+			margin: 0.1em 0;
+			color: #232323;
+			border-left: solid 10px rgba(104,210,42,0.81);
+			.user-right{
+				
+			}
+		}
+	}
 }
-
-
 /* いいね!ボタン =================================== */
 
 
