@@ -27,7 +27,7 @@
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <div>「 <%= resource.unconfirmed_email %>」への変更の認証待ちです。</div>
     <% end %>
 
     <div class="field">

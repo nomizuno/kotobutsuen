@@ -6,11 +6,12 @@ ja:
       user:
         name: ユーザー名
         email: メールアドレス
-        password_confirmation: 確認用パスワード
+        password: パスワード
+        current_password: 現在のパスワード
+        password_confirmation: パスワード(再入力)
     attributes:
       post:
         content: ことば
         reading: 読み方
-    attributes:
-      commetn:
+      comment:
         content: 意味
