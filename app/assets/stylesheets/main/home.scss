@@ -8,7 +8,7 @@ html {
   font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
   line-height: 1.7;
   letter-spacing: 1px;
-  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック"; font-weight: bold;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック",'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif; font-weight: bold;
 }
 
 ul, li {
@@ -59,6 +59,9 @@ a{
   }
 .active {
   border-bottom: solid 2px rgba(104,210,42,0.81);
+}
+input[type="submit"] {
+  -webkit-appearance: none;
 }
 /* ヘッダー ================================ */
 header{
