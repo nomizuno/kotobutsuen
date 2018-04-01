@@ -1,9 +1,16 @@
 ja:
- activerecord:
-   models:
-    user: ユーザー
+  activerecord:
+    models:
+      user: ユーザー
     attributes:
       user:
-       name: ユーザー名
-       password: パスワード
-       email: メールアドレス
+        name: ユーザー名
+        email: メールアドレス
+        password_confirmation: 確認用パスワード
+    attributes:
+      post:
+        content: ことば
+        reading: 読み方
+    attributes:
+      commetn:
+        content: 意味
