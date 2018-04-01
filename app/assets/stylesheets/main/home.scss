@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6, p{
 a{
   text-decoration: none;
   color: #2d3133;
-    font-size: 14px;
+  font-size: 14px;
 }
 
 /* 共通レイアウト ==========================*/
@@ -199,6 +199,64 @@ header{
 		}
 		}
 	}
+	.down-to{
+	width:100%;
+	position:absolute;
+	top:500px;
+	text-align: center;
+	font-size:60px;
+	.down-btn{
+		span{
+		}
+	}
+	}
+}
+
+/* top-about ================================= */
+.top-about-main{
+	position: absolute;
+	top:700px;
+	width:100%;
+	text-align: center;
+	.about-top{
+		h1{
+			background-color: black;
+			color:white;
+		}
+		h2{
+			font-size: 15px;
+		}
+	}
+	.about-contents{
+		.about-content{
+			text-align: center;
+			font-size:10px;
+			padding-top:20px;
+		}
+	}
+	.about-message{
+		margin-top:30px;
+		h2{
+			font-size: 15px;
+		}
+		h1{
+			font-size: 20px;
+		}
+	}
+	.about-end{
+		max-width: 100%;
+		text-align: center;
+		img{
+			height:150px;
+		}
+	}
+	.about-link{
+		a{
+			border-bottom: solid 2px rgba(104,210,42,0.81);
+			padding-bottom:5px;
+		}
+		margin-bottom:30px;
+	}
 }
 /* フラッシュ=================================== */
 .flash {
@@ -287,7 +345,7 @@ header{
 	text-align: center;
 .top-wrapper{
 background-image:image-url("jungle.jpg");
-  height:700px;
+  height:755px;
   background-size:cover;
   color:white;
   position:relative;
@@ -323,6 +381,51 @@ background-image:image-url("jungle.jpg");
 	}
 	}
 }
+.down-to{
+	position:absolute;
+	top:600px;
+	color:white;
+	div{
+		margin-left:47%;
+		width:60px;
+		&:hover {cursor:pointer;
+		color:yellow;}
+	}
+	}
+}
+/* top-about ================================= */
+.top-about-main{
+	position: absolute;
+	top:800px;
+	.about-top{
+		h1{font-size: 40px;
+		}
+		h2{font-size: 25px;
+		}
+	}
+	.about-contents{
+		.about-content{
+			font-size:15px;
+		}
+	}
+	.about-message{
+		margin-top:30px;
+		h2{font-size: 20px;}
+		h1{font-size: 30px;}
+	}
+	.about-end{
+		img{
+		}
+	}
+	.about-link{
+		a{
+			font-size:20px;
+			transition:0.5s;
+			&:hover{
+				color:rgba(104,210,42,0.81);
+			}
+		}
+	}
 }
 /* about ================================ */
 .about-main{

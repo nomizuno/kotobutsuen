@@ -52,8 +52,12 @@
 .posts-show{
 	.container{
 		.posts-show-item{
-			.post-word{}
+			.post-word{
+				margin-bottom:20px;
+			}
 			.posts-comments{
+				max-width: 375px;
+				word-wrap: break-word;
 				.post-like{}
 			}
 		}
@@ -61,6 +65,7 @@
 		.comment-form{text-align: center;
 			.form-body{
 				textarea{
+					margin-top:20px;
 					font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック"; font-weight: bold;
 					outline-color:rgba(104,210,42,0.81);
 					border-style: none;
@@ -191,11 +196,6 @@
 	}
 }
 
- .Induction{
-  width:200%;
-  float:left;
-
-}
 /* ▼タブレット用デザインとして付け足すデザイン ================================ */
 @media all and (min-width:768px){
 /* posts/new ================================ */
@@ -218,6 +218,34 @@
 			}
 		}
 		.Induction{
+		}
+	}
+}
+/* post/show ================================ */
+.posts-show{
+	.container{
+		.posts-show-item{
+			.post-word{
+			}
+			.posts-comments{
+				max-width: 600px;
+				.post-like{}
+			}
+		}
+		.page{}
+		.comment-form{
+			.form-body{
+				textarea{
+				}
+				input{
+				}
+			}
+		}
+		.Induction{
+			a{
+				&:hover{
+				}
+			}
 		}
 	}
 }
