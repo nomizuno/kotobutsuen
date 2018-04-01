@@ -17,6 +17,72 @@
 
   </div>
 
+  </div>
+  <div class="down-to">
+  <div class="down-btn"><span><i class="fas fa-angle-double-down"></i></span></div>
+  </div>
+  <script>
+  $('.down-btn').on('click', function(){
+    var aboutposition = $('.top-about-main').offset().top - 46
+    $("html,body").animate({scrollTop:aboutposition});
+  });
+  </script>
+
+</div>
+
+
+
+<div class = "top-about-main">
+  <div class = "about-top" >
+    <h1>ことぶつえんとは</h1>
+    <h2>動物みたいな言葉たち＝ことぶつ(言物)<br>が生息しています。</h2>
+  </div>
+
+  <div class = "about-contents">
+ 
+    <div class = "about-content">
+      <p>人間や動物たちが生きているように、言葉たちも生きています。</p>
+      <p>新しい言葉が生まれ、使われなくなった言葉が忘れ去られ、</p>
+      <p>言葉の意味も日々刻々と変化します。</p>
+    </div>
+
+    <div class = "about-content">
+      <p>生きているからこそ、言葉は多様な意味を持ちます。</p>
+      <p>そして、その意味は使う人、受け取る人によっても変わります。</p>
+    </div>
+
+    <div class = "about-content">
+      <p>例えば、ある人は『両想い』という言葉を</p>
+      <p>『2人が互いに同じくらい愛している』と解釈する一方、</p>
+      <p>ある人は『両側からの片想い』と考えているかもしれません。</p>
+      <p>例えば、女の子の言う『だめ』は</p>
+      <p>時として『OK』を意味すると昔バイトの先輩に聞いたことがあります。</p>
+    </div>
+
+    <div class = "about-content">
+      <p>そんな生きた言葉を『ことぶつ(言物)』と、ここでは呼びます。</p>
+      <p>ことぶつえんには、多くの『言物』がいます。</p>
+    </div>
+
+    <div class = "about-content">
+      <p>色んな『言物』に触れることで、言葉に対する印象が変わり、</p>
+      <p>そして、言葉で溢れたこの世界の見方も変わるんじゃないでしょうか。</p>
+      <p>僕たちはそう信じています。</p>
+    </div>
+  </div>
+
+    <div class = "about-message">
+      <h2>言葉が変われば、世界も変わる</h2>
+      <h1>ようこそ、ことぶつえんへ</h1>
+    </div>
+　　 
+    <div class = "about-end">
+      <img src="/assets/enter-0b4de992cf7a18862b6e4e0af7d28e26664fe553d004170c2f589fb6d77b6184.png" class = "enter">
+     </div>
+    
+    <div class = "about-link">
+     <%= link_to("ことぶつに会いにいく","/posts/index") %>
+    </div>
 
   </div>
 </div>
