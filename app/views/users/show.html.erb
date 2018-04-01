@@ -28,7 +28,7 @@
 			<% @post = Post.find_by(id: comment.post_id) %>
 			<div class = "user-left" >
 				<div class ="post-word">
-                    <%=link_to(@post.reading, "/posts/#{@post.id}") %>
+
 					【<%=link_to(@post.content, "/posts/#{@post.id}") %>】
 
 

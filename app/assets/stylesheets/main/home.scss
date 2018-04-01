@@ -57,7 +57,9 @@ a{
   .form_error{
   color: red;
   }
-
+.active {
+  border-bottom: solid 2px rgba(104,210,42,0.81);
+}
 /* ヘッダー ================================ */
 header{
   top:0px;
@@ -202,7 +204,7 @@ header{
 	.down-to{
 	width:100%;
 	position:absolute;
-	top:500px;
+	top:400px;
 	text-align: center;
 	font-size:60px;
 	.down-btn{
