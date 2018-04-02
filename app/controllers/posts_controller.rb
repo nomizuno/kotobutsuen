@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 	end
 
 	def popular
-		@comments = Comment.all.order("likes_count desc").limit(5)
+		@comments = Comment.all.order("likes_count desc").limit(50)
 	end
 
 
