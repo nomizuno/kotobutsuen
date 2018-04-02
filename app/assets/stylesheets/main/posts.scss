@@ -4,6 +4,7 @@
 
 /* posts/new ================================ */
 .posts-new{
+	min-height:100vh;
 	.container{
 		text-align: center;
 		.form{
@@ -24,7 +25,7 @@
 					margin-bottom:20px;
 				}
 				.submit-btn{
-					font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック"; font-weight: bold;
+					font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック",'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif; font-weight: bold;
 					width:90%;
 					margin-top:10px;
 					font-size:25px;
@@ -50,6 +51,7 @@
 }
 /* post/show ================================ */
 .posts-show{
+		min-height:100vh;
 	.container{
 		.posts-show-item{
 			.post-word{
@@ -66,14 +68,14 @@
 			.form-body{
 				textarea{
 					margin-top:20px;
-					font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック"; font-weight: bold;
+					font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック",'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif; font-weight: bold;
 					outline-color:rgba(104,210,42,0.81);
 					border-style: none;
 					border:solid 1px black;
 					resize: none;
 				}
 				input{
-					font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック"; font-weight: bold;
+					font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック",'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif; font-weight: bold;
 					width:90%;
 					padding:10px 0px;
 					border-style: none;
@@ -167,6 +169,7 @@
 
 /* post/index ================================ */
 .posts-index{
+	min-height:100vh;
 	.container{
 		.user-tabs{
 			margin-bottom: 20px;
