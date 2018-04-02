@@ -1,31 +1,31 @@
-<div class = "main about-main">
-	<div class = "about-top" >
+<div class = "main howto-main">
+	<div class = "howto-top" >
 		<h1>ことぶつえんの使い方</h1>
 	</div>
 
-	<div class = "about-contents">
-		<div class = "about-content">
+	<div class = "howto-contents">
+		<div class = "howto-content">
 			<h2>ことばを調べる</h2>
 			<p>『あっ、このことばどういう意味だっけ？』</p>
 			<p>『あのことばの本当の意味は？』</p>
 			<p>調べれば答えがきっと出ます。</p>
-			<p>検索へ/ 一覧へ</p>
+			<p><%= link_to("検索","/") %> / <%= link_to("索引","/posts/index")%></p>
 		</div>
 
-		<div class = "about-content">
+		<div class = "howto-content">
 			<h2>ことばの意味を投稿する</h2><p>『これってこういう意味だったんだ』</p>
 			<p>『こんな意味もあるんじゃない？』</p>
-			<p>その意味が誰かのことばの見方を変えるかもしれません。</p>
+			<p>その意味が誰かのことばの見方を<br>変えるかもしれません。</p>
 			<p>投稿してください。</p>
-			<p>一覧へ<p>
+			<p><%= link_to("索引","/posts/index")%><p>
 		</div>
 
-		<div class = "about-content">
+		<div class = "howto-content">
 			<h2>ことばを投稿する</h2>
-			<p>『これってみんなみんなどんな意味で使っているの？』</p>
+			<p>『これってみんなどんな意味で使っているの？』</p>
 			<p>『あの言葉の新しい意味を知りたい！』</p>
 			<p>意味を知りたいことばを投稿してください</p>
-			<p>ことば投稿</p>
+			<p><%= link_to("ことば投稿","/posts/new") %></p>
 		</div>
 
 </div>
