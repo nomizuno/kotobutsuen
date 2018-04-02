@@ -10,7 +10,8 @@
 
 	<!-- /jQueryを読み込む -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<%= javascript_include_tag 'main/application', 'data-turbolinks-track' => true %>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" type="text/css" />
+  <%= javascript_include_tag 'main/application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -91,10 +92,6 @@ $('.logout').click(function(){
 <!-- /ハンバーガーjava終了 -->
 </header>
 
-
-
-
-
 <% if flash[:notice] %>
 <div class ="flash">
 	  <p class="alert"><%= alert %></p>
@@ -102,12 +99,36 @@ $('.logout').click(function(){
 </div>
 <% end %>
 
+
+<footer>
+<ul class="footer-menus">
+    <li>
+    <%= link_to("トップ","/",class:"footer-link")  %>
+    </li>
+    <li>|</li>
+    <li>
+    <%= link_to("利用規約","about",class:"footer-link") %>
+    </li>
+    <li>|</li>
+    <li>
+    <%= link_to("運営【ユウマシン】","http://www.yumashin.net/",class:"footer-link animated pulse infinite",:target=>["_blank"]) %>
+    </li>
+    <li>|</li>
+    <li>
+    <%= link_to("コンタクト","https://thebase.in/inquiry/yumashin",class:"footer-link",:target=>["_blank"]) %>
+    </li>
+  </ul>
+    <p class="copy-right">Copyright(c)2018 kotobutsuen.com All Rights Reserved</p>
+</footer>
+
 <%= yield %>
 
 
-<footer>
 
-</footer>
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+
+
+
 </body>
 </html>
