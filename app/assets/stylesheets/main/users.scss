@@ -18,8 +18,16 @@
 			p{
 				font-family:bold;
 			}
-			.user-edit-bottun{
-				
+			.user-edit-button{
+				p{padding-bottom: 10px;}
+				a{
+					font-size:15px;
+					background-color: rgba(104,210,42,0.7);
+					padding:5px 15px;
+					border-radius: 5px;
+
+				}
+
 			}
 			.count{
 			font-size: 25px;
@@ -48,5 +56,8 @@
 			}
 		}
 	}
+}
+.users-login{
+
 }
 
