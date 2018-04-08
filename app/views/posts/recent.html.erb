@@ -6,29 +6,29 @@
 			<li class="active"><%= link_to("新着","/posts/recent") %></li>
 
 
-			
+
 		</ul>
-		
+
 
 		<% @comments.each do |comment| %>
-		
+
 		<div class="posts-index-item">
-			
+
 			<div class ="user-right" >
 				<% post = Post.find_by(id: comment.post_id) %>
-				
-				<%= link_to(post.reading,"/posts/#{comment.post_id}") %> 
+
+				<!-- <%= link_to(post.reading,"/posts/#{comment.post_id}") %>  -->
 				【<%= link_to(post.content,"/posts/#{comment.post_id}") %>】
 				<span class = "comment">
 					<%= link_to(comment.content,"/posts/#{comment.post_id}") %>
-					<span class = "fa fa-heart like-btn"></span> 
+					<span class = "fa fa-heart like-btn"></span>
 					<%= comment.likes_count %>
 				</span>
-				
+
 			</div>
 
 		</div>
 		<% end %>
-		
+
 	</div>
 </div>
