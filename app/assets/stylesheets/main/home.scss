@@ -43,7 +43,8 @@ body{
   width: 100%;
   height:auto;
   background-color: white;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
+  min-height:93.5vh;
   }
 
 .container{
@@ -297,6 +298,7 @@ footer{
 }
 /* howto=================================== */
 .howto-main{
+
 	.howto-top{
 		text-align: center;
 		margin-bottom: 10px;
@@ -304,6 +306,7 @@ footer{
 		}
 	}
 	.howto-contents{
+		margin-bottom:30px;
 		.howto-content{
 			text-align: center;
 			margin-top:10px;
@@ -327,6 +330,9 @@ footer{
 		.sentence{
 			h3{
 				border-bottom: solid 2px rgba(104,210,42,0.81);
+			}
+			p{
+				font-size:10px;
 			}
 		}
 	}
@@ -524,7 +530,7 @@ footer{
 		text-align: center;
 		width: 70%;
 		margin: 0 auto;
-		margin-bottom: 30px;
+		margin-bottom: 70px;
 		.howto-content{
 			text-align: center;
 			h2{
@@ -534,9 +540,20 @@ footer{
 		}
 	}
 }
+/* agreement=================================== */
+.agreement{
+	.container{
+		max-width: 80%;
+		.sentence{
+			h3{				
+			}
+			p{
+				font-size: 15px;
+			}
+		}
+	}
 }
-/* howto=================================== */
-
+}
 /* ▼PC用デザインとして付け足すデザイン ================================ */
 @media all and (min-width:920px){
 
