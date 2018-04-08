@@ -1,12 +1,12 @@
 <div class ="main posts-index">
 	<div class="container">
-		
+
 
 
 		<ul class="user-tabs">
 			<li ><%= link_to("人気","/posts/popular") %></li>
-			
-			
+
+
 			<li class="active"><%= link_to("索引","/posts/index") %></li>
 			<li><%= link_to("新着","/posts/recent") %></li>
 		</ul>
@@ -16,7 +16,7 @@
 			<div class ="user-right" >
 				<span><%= link_to(post.reading,"/posts/#{post.id}") %></span>
 				【<%= link_to(post.content,"/posts/#{post.id}") %>】
-				
+
 			</div>
 
 		</div>
