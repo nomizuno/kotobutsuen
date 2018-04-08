@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   	@user = User.find_by(id: params[:id])
 
 
-    @comments = Comment.where(user_id: @user.id)
+    @comments = Comment.where(user_id: @user.id).order(created_at: :desc)
     @post_count = Post.where(user_id: @user.id).count
     @comments_count = Comment.where(user_id: @user.id).count
 
