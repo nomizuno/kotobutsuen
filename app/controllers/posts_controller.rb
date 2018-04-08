@@ -17,7 +17,10 @@ class PostsController < ApplicationController
 
 	def recent
 		@comments = Comment.all.order(created_at: :desc).limit(50)
+	end
 
+  def recent_words
+		@posts = Post.where.order(created_at: :desc).limit(50)
 	end
 
 	def popular
@@ -33,7 +36,7 @@ class PostsController < ApplicationController
 		@post.save
 	  if @post.save
       #保存できた場合
-        redirect_to("/posts/index")
+        redirect_to("/posts/#{@post.id}")
         flash[:notice] ="投稿できたよ!"
       else
   	    render("/posts/new")

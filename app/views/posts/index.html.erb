@@ -8,11 +8,11 @@
 
 
 			<li class="active"><%= link_to("索引","/posts/index") %></li>
-			<li><%= link_to("新着","/posts/recent") %></li>
+			<li><%= link_to("新着意味","/posts/recent") %></li>
 		</ul>
 		<% @posts.each do |post| %>
 		<div class="posts-index-item">
-			
+
 			<div class ="user-right" >
 				<span><%= link_to(post.reading,"/posts/#{post.id}") %></span>
 				【<%= link_to(post.content,"/posts/#{post.id}") %>】
