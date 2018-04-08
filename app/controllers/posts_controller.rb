@@ -20,7 +20,7 @@ class PostsController < ApplicationController
 	end
 
   def recent_words
-		@posts = Post.where.order(created_at: :desc).limit(50)
+		@posts = Post.where(comments_count: 0).order(created_at: :desc).limit(50)
 	end
 
 	def popular
@@ -32,7 +32,8 @@ class PostsController < ApplicationController
 	def create
 		@post=Post.new(content: params[:content],
 			user_id: current_user.id,
-			reading: params[:reading])
+			reading: params[:reading],
+      comments_count: 0)
 		@post.save
 	  if @post.save
       #保存できた場合
@@ -47,6 +48,8 @@ class PostsController < ApplicationController
     def show
      @post = Post.find_by(id: params[:id])
      @comments = Comment.where(post_id: @post.id).order("likes_count desc").page(params[:page])
+     @post.comments_count = Comment.where(post_id: @post.id).count
+     @post.save
      # @comments = Comment.page(params[:page])
     end
 
