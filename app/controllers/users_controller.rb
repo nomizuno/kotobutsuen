@@ -27,6 +27,8 @@ end
 
 def likes
   @user = User.find_by(id: params[:id])
+  @post_count = Post.where(user_id: @user.id).count
+  @comments_count = Comment.where(user_id: @user.id).count
   @likes = Like.where(user_id: @user.id)
 end
 
