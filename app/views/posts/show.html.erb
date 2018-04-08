@@ -28,10 +28,18 @@
 					    <% end %>
 					  <% end %>
 					 <% @likes_count = Like.where(comment_id: comment.id).count %>
-					 <%= @likes_count %>
+					  <%= @likes_count %>
+						<% @likes = Like.where(comment_id: comment.id) %>
+						<% @likes.each do |like| %>
+							<% @user = User.find_by(id: like.user_id) %>
+							<%= link_to(@user.name, "/users/#{@user.id}") %>
+						<% end %>
+
 					<% if comment.user_id == current_user.id %>
-					<%= link_to "投稿を削除","/comments/#{comment.id}/destroy",method:"post",class:'delete_comment' %>
+					 <%= link_to "投稿を削除","/comments/#{comment.id}/destroy",method:"post",class:'delete_comment' %>
 					<% end %>
+
+
 					<% else %>
 					<%= link_to("/users/sign_in") do %>
 					<span class = "fa fa-heart like-btn"></span>
