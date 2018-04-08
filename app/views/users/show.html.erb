@@ -38,7 +38,9 @@
 
 			<div class ="user-right" >
 				<%= link_to(comment.content,"/posts/#{comment.post_id}") %>
-
+				<span class = "fa fa-heart like-btn"></span>
+				<%= comment.likes_count %>
+				</span>
 			</div>
 
 
