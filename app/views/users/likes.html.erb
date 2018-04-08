@@ -19,19 +19,17 @@
 		</div>
 
         <ul class="user-tabs">
-			<li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
-			<li> <%= link_to("お気に入り", "/users/#{@user.id}/likes") %> </li>
-
-		</ul>
-
-		<% @comments.each do |comment| %>
+			<li class><%= link_to("投稿", "/users/#{@user.id}") %></li>
+			<li class="active"><%= link_to("お気に入り", "/users/#{@user.id}/likes") %></li>
+		   </ul>
+		<% @likes.each do |like| %>
+		<% comment =Comment.find_by(id: like.comment_id) %>
 		<div class="comments-index-item">
 			<% @post = Post.find_by(id: comment.post_id) %>
 			<div class = "user-left" >
 				<div class ="post-word">
 
 					【<%=link_to(@post.content, "/posts/#{@post.id}") %>】
-
 
 
 				</div>
