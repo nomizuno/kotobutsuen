@@ -13,18 +13,19 @@ class PostsController < ApplicationController
            redirect_to("/posts/new")
          end
 
-    end
+  end
+
 
 	def recent
-		@comments = Comment.all.order(created_at: :desc).limit(50)
+		@comments = Comment.all.order(created_at: :desc).page(params[:page])
 	end
 
   def recent_words
-		@posts = Post.where(comments_count: 0).order(created_at: :desc).limit(50)
+		@posts = Post.where(comments_count: 0).order(created_at: :desc).page(params[:page])
 	end
 
 	def popular
-		@comments = Comment.all.order("likes_count desc").limit(50)
+		@comments = Comment.all.order("likes_count desc").page(params[:page])
 	end
 
 
@@ -56,6 +57,27 @@ class PostsController < ApplicationController
      def show_all
      @post = Post.find_by(id: params[:id])
      @comments = Comment.where(post_id: @post.id).order("likes_count desc")
+    end
+
+    def index_all
+      @words = ["あ","い","う","え","お",
+                "か","き","く","け","こ",
+                 "さ","し","す","せ","そ",
+                 "た","ち","つ","て","と",
+                 "な","に","ぬ","ね","の",
+                  "は","ひ","ふ","へ","ほ",
+                  "ま","み","む","め","も",
+                  "や","ゆ","よ",
+                  "ら","り","る","れ","ろ",
+                "わ","を","ん",
+                "が","ぎ","ぐ","げ","ご",
+                 "ざ","じ","ず","ぜ","ぞ",
+               "だ","ぢ","づ","で","ど",
+               "ば","び","ぶ","べ","ぼ","ぱ","ぴ","ぷ","ぺ","ぽ"]
+    end
+
+    def word
+  		 @posts = Post.where(['reading LIKE ?', "#{params[:word]}%"])or(Post.where(['reading LIKE ?', "#{params[:word]}%"]))
     end
 
 end
