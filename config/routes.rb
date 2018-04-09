@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   get "about"=>"home#about"
   get "agreement"=>"home#agreement"
   get 'posts/index' => "posts#index"
+  get 'posts/index_all' => "posts#index_all"
+
+  get 'posts/index/:word' => "posts#word"
+
+
   get 'posts/recent' => "posts#recent"
   get 'posts/recent_words' => "posts#recent_words"
   get 'posts/popular' => "posts#popular"

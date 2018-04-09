@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   	@user = User.find_by(id: params[:id])
 
 
-    @comments = Comment.where(user_id: @user.id).order(created_at: :desc)
+    @comments = Comment.where(user_id: @user.id).order(created_at: :desc).page(params[:page])
     @post_count = Post.where(user_id: @user.id).count
     @comments_count = Comment.where(user_id: @user.id).count
 
@@ -29,7 +29,7 @@ def likes
   @user = User.find_by(id: params[:id])
   @post_count = Post.where(user_id: @user.id).count
   @comments_count = Comment.where(user_id: @user.id).count
-  @likes = Like.where(user_id: @user.id)
+  @likes = Like.where(user_id: @user.id).page(params[:page])
 end
 
 end
