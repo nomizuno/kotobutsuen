@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
 
     def destroy
       @comment =Comment.find_by(id: params[:id])
-
+      Like.where(comment_id: @comment.id).destroy_all
       @post = Post.find_by(id: @comment.post_id)
       @comment.destroy
 			@post.comments_count = Comment.where(post_id: @post.id).count
