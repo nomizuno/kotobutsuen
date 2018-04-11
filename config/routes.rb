@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '' =>"home#top"
   get "about"=>"home#about"
   get "agreement"=>"home#agreement"
+  get "question" => "home#quest"
   get 'posts/index' => "posts#index"
   get 'posts/index_all' => "posts#index_all"
 
@@ -38,5 +39,8 @@ Rails.application.routes.draw do
 
   post "likes/:comment_id/create" => "likes#create"
   post "likes/:comment_id/destroy" => "likes#destroy"
+
+  post "likes/:comment_id/create_recent" => "likes#create_recent"
+  post "likes/:comment_id/destroy_recent" => "likes#destroy_recent"
 
 end

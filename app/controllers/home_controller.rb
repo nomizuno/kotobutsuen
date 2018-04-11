@@ -6,7 +6,12 @@ class HomeController < ApplicationController
 
   def about
   end
-  
+
   def agreement
   end
+
+  def  quest
+
+  end
+
 end
