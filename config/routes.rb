@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '' =>"home#top"
   get "about"=>"home#about"
   get "agreement"=>"home#agreement"
+  get "question" => "home#quest"
   get 'posts/index' => "posts#index"
   get 'posts/index_all' => "posts#index_all"
 

@@ -316,6 +316,12 @@ footer{
 				border-top: solid 2px rgba(104,210,42,0.81);
 				margin-bottom: 20px;
 			}
+      h3{
+        border-bottom: solid 2px rgba(104,210,42,0.81);
+        border-top: solid 2px rgba(104,210,42,0.81);
+       margin: 20px 0;
+
+			}
 			a{
 				font-size: 20px;
 				padding-bottom:3px;
@@ -429,7 +435,7 @@ footer{
 		padding:0 10px 0 10px;
 		font-size:15px;
 		&:hover{
-		
+
 		}
 	}
 	}
@@ -482,7 +488,7 @@ footer{
 	color:white;
 	width: 100%;
 	span{
-		
+
 	}
 	}
 }
@@ -545,7 +551,7 @@ footer{
 	.container{
 		max-width: 80%;
 		.sentence{
-			h3{				
+			h3{
 			}
 			p{
 				font-size: 15px;
