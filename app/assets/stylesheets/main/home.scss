@@ -76,11 +76,36 @@ header{
   background-color:rgba(0,0,0,0.82);
 .header-logo a{
 	float:left;
-	padding-left:20px;
+	padding-left:5px;
 	color:white;
 	font-size:22px;
 	line-height:46px;
 }
+.search-tag{
+	line-height: 46px;
+	display:inline-block;
+	.search-box{
+		width:120px;
+		height: 30px;
+		font-size:15px;
+		outline: 0;
+		margin-left:10px;
+	}
+	.search-btn{
+		border:none;
+		background-color:rgba(0,0,0,0);
+		outline: 0;
+		&:hover .fa-search{
+			cursor:pointer;
+			color: rgba(104,210,42,0.81);
+			
+		}
+		}
+	}
+		.fa-search{
+		font-size: 15px;
+		color: white;
+	}
 .g-nav{
   display: none;
   position: absolute;
@@ -149,6 +174,32 @@ header{
 }
 }
 
+.back-btn{
+	position: absolute;
+	position: fixed;
+	top:50px;
+	left:5px;
+	button{
+		font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック",'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif; font-weight: bold;
+		color: white;
+		font-size:13px;
+		border: none;
+		background-color: rgba(0,0,0,0.00);
+		height: 50px;
+		width:50px;
+		border-radius: 50%;
+		background-color: rgba(0,0,0,0.4);
+		text-align: center;
+		line-height: 50px;
+		outline: 0;
+	&:hover{
+		cursor:pointer;
+		background-color: rgba(104,210,42,0.8);
+		color: black;
+	}
+	}
+}
+
 #acMenu dt{
     display:block;
 
@@ -180,7 +231,7 @@ footer{
 	.footer-link{
 		color: white;
 		display: block;
-		padding:0 5px 0 5px;
+		padding:0 0px 0 0px;
 		transition: 0.7s;
 		font-size:10px;
 		&:hover{
@@ -339,6 +390,28 @@ footer{
 			}
 			p{
 				font-size:10px;
+			}
+		}
+	}
+}
+/* q and a=================================== */
+.q-a{
+	.q-a-top{
+		text-align: center;
+		margin-top:50px;
+		h1{}
+	}
+	.q-a-contents{
+		.q-a-content{
+			background-color: rgba(104,210,42,0.3);
+			padding:10px 30px;
+			margin:10px 10px;
+			border-radius: 10px;
+			h3{
+				
+			}
+			p{
+				
 			}
 		}
 	}
