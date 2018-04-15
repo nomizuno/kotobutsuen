@@ -15,8 +15,8 @@
 
 			<% @comments.each do |comment| %>
 			<div class ="posts-comments">
-				<%= link_to(comment.content, "/users/#{comment.user_id}") %>
-				<div class ="post-like" >
+				<%= link_to(comment.content, "/users/#{comment.user_id}",class:'comment') %>
+				<div class ="post-like">
 					<% if user_signed_in? %>
 					  <% if Like.find_by(user_id: current_user.id, comment_id: comment.id) %>
 					    <%= link_to("/likes/#{comment.id}/destroy",{method:"post"}) do %>
@@ -27,17 +27,23 @@
 					      <span class = "fa fa-heart like-btn-unlike"></span>
 					    <% end %>
 					  <% end %>
+
 					 <% @likes_count = Like.where(comment_id: comment.id).count %>
 					  <%= @likes_count %>
+					  <% if comment.user_id == current_user.id %>
+					 <%= link_to "投稿を削除","/comments/#{comment.id}/destroy",method:"post",class:'delete_comment' %>
+					<% end %>
+					<br>
+					  <nobr class="who_like">・・・</nobr>
+					  <nobr class="like_user">
 						<% @likes = Like.where(comment_id: comment.id) %>
 						<% @likes.each do |like| %>
 							<% @user = User.find_by(id: like.user_id) %>
 							<%= link_to(@user.name, "/users/#{@user.id}") %>
 						<% end %>
+					</nobr>
 
-					<% if comment.user_id == current_user.id %>
-					 <%= link_to "投稿を削除","/comments/#{comment.id}/destroy",method:"post",class:'delete_comment' %>
-					<% end %>
+					
 
 
 					<% else %>
@@ -85,5 +91,11 @@
 	</div>
 	<% end %>
   </div>
+
+<script type="text/javascript">
+	$(".who_like").click(function(){
+  $(this).next(".like_user").fadeToggle('slow');
+});
+</script>
 
 </div>

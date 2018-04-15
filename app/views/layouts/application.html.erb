@@ -23,6 +23,18 @@
     <div class="header-logo">
       <%= link_to("ことぶつえん","/") %>
     </div>
+    <div class="search-tag">
+    <%= form_tag '/posts/index', :method => 'get' do %>
+        <p>
+          <%= text_field_tag :search, params[:search] ,placeholder: '例）人生', class:'search-box'%>
+          <button type="submit" onclick="history.back()" class="search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+
+
+        </p>
+        <% end %>
+    </div>
     <nav class="g-nav">
     <ul class="menu">
 
@@ -99,6 +111,9 @@ $('.logout').click(function(){
 </div>
 <% end %>
 
+<div class="back-btn">
+  <button type="submit" onclick="history.back()">戻る</button>
+</div>
 
 <footer>
 <ul class="footer-menus">
@@ -115,7 +130,7 @@ $('.logout').click(function(){
     </li>
     <li>|</li>
     <li>
-    <%= link_to("運営","http://www.yumashin.net/",class:"footer-link animated pulse infinite",:target=>["_blank"]) %>
+    <%= link_to("運営【ユウマシン】","http://www.yumashin.net/",class:"footer-link animated pulse infinite",:target=>["_blank"]) %>
     </li>
     <li>|</li>
     <li>
