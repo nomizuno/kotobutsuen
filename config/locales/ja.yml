@@ -215,3 +215,4 @@ ja:
       last: ">>"
       previous: "<"
       next: ">"
+      truncate: "..."
