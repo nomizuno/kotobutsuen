@@ -16,6 +16,8 @@ gem 'google-analytics-rails'
 gem 'paperclip', '~> 5.2.0'
 gem 'aws-sdk', '~> 2.3'
 
+gem 'meta-tags'
+
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
