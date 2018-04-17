@@ -5,7 +5,6 @@
 
 	<title>ことぶつえん</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
 	<%= stylesheet_link_tag    'main/application', media: 'all', 'data-turbolinks-track' => true %>
 
 	<!-- /jQueryを読み込む -->
@@ -15,6 +14,13 @@
 	<%= csrf_meta_tags %>
  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
    <%= analytics_init if Rails.env.production? %>
+
+	 <!-- 検索エンジン用 -->
+ <meta name="description" content="「ことぶつえん」は投稿型辞書アプリです。一緒にことばの新しい意味を考えてみない？">
+
+ <!-- OGPタグ -->
+ <meta property="og:url" content="www.kotobutsuen.com" />
+ <meta property="og:image" content="jungle.jp" />
 </head>
 
 
