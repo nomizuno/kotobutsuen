@@ -9,7 +9,7 @@
         <h4>とりあえず、ことばを調べる</h4>
         <%= form_tag '/posts/index', :method => 'get' do %>
         <p>
-          <%= text_field_tag :search, params[:search] ,placeholder: '例）人生', class:'search-box'%>
+          <%= text_field_tag :search, params[:search] ,placeholder: '例）涙', class:'search-box'%>
           <%= submit_tag "検索", :name => nil , class:'search-btn'%>
         </p>
         <% end %>
