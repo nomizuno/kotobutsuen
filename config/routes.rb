@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'home#top'
+  root 'posts#popular'
 
   get 'posts/index'
 
-  get '' =>"home#top"
+  get 'top' =>"home#top"
   get "about"=>"home#about"
   get "agreement"=>"home#agreement"
   get "question" => "home#quest"
