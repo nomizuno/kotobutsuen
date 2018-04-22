@@ -27,7 +27,7 @@
 <body>
   <header>
     <div class="header-logo">
-      <%= link_to("ことぶつえん","/") %>
+      <%= link_to("ことぶつえん","/top") %>
     </div>
     <div class="search-tag">
     <%= form_tag '/posts/index', :method => 'get' do %>
@@ -117,14 +117,14 @@ $('.logout').click(function(){
 </div>
 <% end %>
 
-<div class="back-btn">
-  <button type="submit" onclick="history.back()">戻る</button>
-</div>
+<!-- <div class="back-btn"> -->
+  <!-- <button type="submit" onclick="history.back()">戻る</button> -->
+<!-- </div> -->
 
 <footer>
 <ul class="footer-menus">
     <li>
-    <%= link_to("トップ","/",class:"footer-link")  %>
+    <%= link_to("トップ","/top",class:"footer-link")  %>
     </li>
     <li>|</li>
     <li>
