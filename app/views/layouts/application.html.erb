@@ -65,7 +65,7 @@
       <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"menu-item logout"%></p>
     </li>
 <!-- alert -->
-    <script>
+<script>
 $('.logout').click(function(){
     if(!confirm('本当にログアウトしますか？')){
         /* キャンセルの時の処理 */
@@ -120,6 +120,38 @@ $('.logout').click(function(){
 <!-- <div class="back-btn"> -->
   <!-- <button type="submit" onclick="history.back()">戻る</button> -->
 <!-- </div> -->
+<div class="touch_panels">
+  <div class="touch_panel">
+    <i class="fa fa-heart"></i>
+    <%= link_to("","/posts/popular",class:"touch-item") %>
+    <p>人気の意味</p>
+  </div>
+  <div class="touch_panel">
+    <i class="fa fa-exclamation"></i>
+    <%= link_to("","/posts/recent",class:"touch-item") %>
+    <p>新着の意味</p>
+  </div>
+  <div class="touch_panel">
+    <i class="fa fa-search"></i>
+    <%= link_to("","/top",class:"touch-item") %>
+    <p>言葉の検索</p>
+  </div>
+
+  <% if user_signed_in? %>
+  <div class="touch_panel">
+    <i class="fa fa-user"></i>
+    <%= link_to("",  "/users/#{current_user.id}",class:"menu-item") %>
+    <p><%= "#{current_user.name}"%></p>
+  </div>
+  <% else %>
+  <div class="touch_panel">
+    <i class="fa fa-user"></i>
+    <%= link_to "", "/users/sign_in",class:"menu-item" %>
+    <p>ログイン</p>
+  </div>
+  <% end %>
+</div>
+
 
 <footer>
 <ul class="footer-menus">
