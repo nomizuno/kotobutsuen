@@ -8,6 +8,8 @@
 	<%= stylesheet_link_tag    'main/application', media: 'all', 'data-turbolinks-track' => true %>
 
 <%= favicon_link_tag('kotobutu.ico') %>
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
 
 	<!-- /jQueryを読み込む -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -126,24 +128,29 @@ $('.logout').click(function(){
   <div class="touch_panel">
     <i class="fa fa-heart"></i>
     <%= link_to("","/posts/popular",class:"touch-item") %>
-    <p>人気の意味</p>
+    <p>人気</p>
   </div>
   <div class="touch_panel">
     <i class="fa fa-exclamation"></i>
     <%= link_to("","/posts/recent",class:"touch-item") %>
-    <p>新着の意味</p>
+    <p>新着</p>
   </div>
   <div class="touch_panel">
     <i class="fa fa-search"></i>
     <%= link_to("","/top",class:"touch-item") %>
-    <p>言葉の検索</p>
+    <p>検索</p>
+  </div>
+  <div class="touch_panel">
+    <i class="fa fa-plus-square"></i>
+    <%= link_to("","/posts/new",class:"touch-item") %>
+    <p>投稿</p>
   </div>
 
   <% if user_signed_in? %>
   <div class="touch_panel">
     <i class="fa fa-user"></i>
     <%= link_to("",  "/users/#{current_user.id}",class:"menu-item") %>
-    <p><%= "#{current_user.name}"%></p>
+    <p>ME</p>
   </div>
   <% else %>
   <div class="touch_panel">
