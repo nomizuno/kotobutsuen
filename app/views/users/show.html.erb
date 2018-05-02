@@ -5,6 +5,7 @@
 		<div class ="user">
 			 <%= image_tag @user.avatar.url, class: "border rounded w-25" %>
 			<h2>@<%= @user.name %></h2>
+      <p><%= @user.userprofile %> </p>
 			<div class ="user-edit-button">
 			  <% if user_signed_in? %>
 				<% if @user.id == current_user.id %>
@@ -13,6 +14,7 @@
 				<% end %>
 			<% end %>
 			</div>
+
 			<p>ことば投稿数&nbsp<span class ="count"><%= @post_count %></span></p>
 			<p>意味投稿数&nbsp<span class ="count"><%= @comments_count %></span></p>
 

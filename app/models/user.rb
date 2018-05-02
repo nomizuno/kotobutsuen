@@ -12,6 +12,8 @@ class User < ApplicationRecord
             length: {maximum: 10}
 
   validate :validate_name
+  validates :userprofile,length: {maximum: 50}
+
 
   attr_accessor :login
 
