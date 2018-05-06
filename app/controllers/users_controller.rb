@@ -8,6 +8,8 @@ class UsersController < ApplicationController
     @post_count = Post.where(user_id: @user.id).count
     @comments_count = Comment.where(user_id: @user.id).count
 
+    @likes_count = Comment.where(user_id: @user.id).sum(:likes_count)
+
   end
 
   def new
@@ -30,6 +32,7 @@ def likes
   @post_count = Post.where(user_id: @user.id).count
   @comments_count = Comment.where(user_id: @user.id).count
   @likes = Like.where(user_id: @user.id).order(created_at: :desc).page(params[:page])
+  @likes_count = Comment.where(user_id: @user.id).sum(:likes_count)
 end
 
 end
