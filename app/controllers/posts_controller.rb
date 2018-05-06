@@ -28,6 +28,9 @@ class PostsController < ApplicationController
 		@comments = Comment.all.order("likes_count desc").page(params[:page])
 	end
 
+  def random
+    @comments = Comment.order("RANDOM()").page(params[:page])
+  end
 
 
 	def create
