@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get "question" => "home#quest"
   get 'posts/index' => "posts#index"
   get 'posts/index_all' => "posts#index_all"
-
+  get 'posts/random' => "posts#random"
   get 'posts/index/:word' => "posts#word"
 
 
