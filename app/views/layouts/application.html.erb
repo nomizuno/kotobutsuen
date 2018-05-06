@@ -135,22 +135,24 @@ $('.logout').click(function(){
     <%= link_to("","/posts/recent",class:"touch-item") %>
     <p>新着</p>
   </div>
-  <div class="touch_panel">
-    <i class="fa fa-search"></i>
-    <%= link_to("","/top",class:"touch-item") %>
-    <p>検索</p>
-  </div>
+
   <div class="touch_panel">
     <i class="fa fa-plus-square"></i>
     <%= link_to("","/posts/new",class:"touch-item") %>
     <p>投稿</p>
   </div>
 
+  <div class="touch_panel">
+    <i class="fa fa-search"></i>
+    <%= link_to("","/top",class:"touch-item") %>
+    <p>検索</p>
+  </div>
+
   <% if user_signed_in? %>
   <div class="touch_panel">
     <i class="fa fa-user"></i>
     <%= link_to("",  "/users/#{current_user.id}",class:"menu-item") %>
-    <p>ME</p>
+    <p>マイページ</p>
   </div>
   <% else %>
   <div class="touch_panel">
