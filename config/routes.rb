@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "about"=>"home#about"
   get "agreement"=>"home#agreement"
   get "question" => "home#quest"
+  get "radio" => "home#radio"
   get 'posts/index' => "posts#index"
   get 'posts/index_all' => "posts#index_all"
   get 'posts/random' => "posts#random"

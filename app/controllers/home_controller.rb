@@ -10,8 +10,10 @@ class HomeController < ApplicationController
   def agreement
   end
 
-  def  quest
-
+  def quest
+  end
+  
+  def radio
   end
 
 end
