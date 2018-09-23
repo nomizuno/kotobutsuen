@@ -35,4 +35,14 @@ def likes
   @likes_count = Comment.where(user_id: @user.id).sum(:likes_count)
 end
 
+
+def send_newsletter
+  UserMailer.newsletter.deliver
+  # User.find_each do |user|
+   # UserMailer.with(user: user).newsletter.deliver
+  # end
+
+   redirect_to("/posts/recent")
+end
+
 end

@@ -29,10 +29,12 @@ Rails.application.routes.draw do
   get "posts/:id/all" => "posts#show_all"
   get "posts/:id/edit" => "posts#edit"
 
+  get "users/newsletter" => "users#send_newsletter"
   get "users/:id" => "users#show"
   get "users/:id/edit" => "users#edit"
   post "users/:id/update" =>"users#update"
   get "users/:id/likes" => "users#likes"
+
 
   post "comments/:id/create" => "comments#create"
   post "comments/:id/destroy" => "comments#destroy"
