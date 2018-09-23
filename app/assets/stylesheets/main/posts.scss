@@ -2,6 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* news ================================ */
+.news{
+	p{
+		line-height: 70px;
+		width:100px;
+		text-align: center;
+		background-color:rgba(104,210,42,0.81);
+		position: absolute;
+		border-radius: 10%;
+	}
+	ul{
+		li{
+			line-height: 23px;
+			a{
+				padding-left: 110px;
+			}
+		}
+	}
+	padding-bottom: 20px;
+}
+.news:after{
+	content:"";
+	clear:both;
+	display: block;
+}
 /* posts/new ================================ */
 .posts-new{
 	.container{

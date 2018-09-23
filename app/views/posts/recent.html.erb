@@ -1,5 +1,10 @@
 <div class ="main posts-index">
 	<div class="container">
+		
+		<!--ニュースここから-->
+		<%= render 'shared/news' %>
+		<!--ニュースここまで-->
+		
 		<ul class="user-tabs">
 			<li ><%= link_to("人気","/posts/popular") %></li>
 			<li ><%= link_to("索引","/posts/index_all") %></li>
