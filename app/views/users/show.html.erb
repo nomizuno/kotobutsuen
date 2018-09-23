@@ -26,7 +26,7 @@
 
 		</ul>
 
-		<% @comments.each do |comment| %>
+	<% @comments.each do |comment| %>
 		<div class="comments-index-item">
 			<% @post = Post.find_by(id: comment.post_id) %>
 			<div class = "user-left" >
@@ -48,7 +48,9 @@
 
 
 		</div>
-		<% end %>
+	<% end %>
+
+	  <!-- <%= link_to("メルマガ送る","/users/newsletter") %> -->
 
 		<div class = "page">
 		 <%= paginate @comments %>
