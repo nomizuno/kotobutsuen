@@ -12,8 +12,8 @@ class HomeController < ApplicationController
 
   def quest
   end
-  
-  def radio
+
+  def works
   end
 
 end
