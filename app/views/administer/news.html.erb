@@ -1,0 +1,21 @@
+<div class="main posts-new">
+	<div class="container">
+		<h1 class="form-heading">管理者ページ</br>ニュース情報更新</h1>
+
+    <%= form_tag("/administer/create")do %>
+
+      <p>title</p>
+      <input name="title"></br>
+
+      <p>URL</p>
+      <input name="url"></br>
+
+      <p>次回のことば</p>
+      <input name="next"></br>
+
+      <input type ="submit" value="ニュースを更新する" class="submit-btn">
+
+    <% end %>
+
+	</div>
+</div>
