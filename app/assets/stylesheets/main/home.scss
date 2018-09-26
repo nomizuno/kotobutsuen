@@ -98,7 +98,7 @@ header{
 		&:hover .fa-search{
 			cursor:pointer;
 			color: rgba(104,210,42,0.81);
-			
+
 		}
 		}
 	}
@@ -453,18 +453,18 @@ footer{
 				font-size:20px;
 				margin-bottom: 20px;
 			}
-			margin-bottom: 40px;
+			margin-bottom: 20px;
 		}
 		.radio-list{
 			div{
 				text-align: center;
 			a{
 			margin: 0 auto;
-			border-bottom: solid 2px rgba(104,210,42,0.81);
+			border: solid 2px rgba(104,210,42,0.81);
 			margin-bottom: 30px;
 			display:inline-block;
 			padding: 0 20px;
-			font-size:30px;
+			font-size:20px;
 			}
 			}
 
@@ -498,10 +498,10 @@ footer{
 			margin:10px 10px;
 			border-radius: 10px;
 			h3{
-				
+
 			}
 			p{
-				
+
 			}
 		}
 	}
