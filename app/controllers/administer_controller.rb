@@ -1,5 +1,6 @@
 class AdministerController < ApplicationController
 
+before_action ;
 
   def radio
   end
