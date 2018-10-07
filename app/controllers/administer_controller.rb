@@ -2,14 +2,14 @@ class AdministerController < ApplicationController
 
 before_action ;
 
-  def radio
+  def news
   end
 
   def create
     @news = News.new(
       title: params[:title],
-  	  usr: params[:url],
-  	  next: params[:next]
+  	  url: params[:url],
+  	  title2: params[:title2]
     )
     @news.save
     if   @news.save

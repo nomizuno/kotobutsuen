@@ -1,12 +1,14 @@
     <div class="news">
       <p>NEWS</p>
       <ul class="news-list">
+        <% @news = News.order(created_at: :desc).take %>
+        <% @post = Post.find_by(content: "#{@news.title2}") %>
         <li>
-          <%= link_to("ラジオ#7「失敗」のその先へ","https://radiotalk.jp/talk/61474",class:"",:target=>["_blank"]) %>
+          <%= link_to("#{@news.title}","#{@news.url}",class:"",:target=>["_blank"]) %>
         </li>
         <li>
-          <%= link_to("次回の言葉「片思い」","/posts/25",class:"") %>
-        </li>
+          <%= link_to("次回の言葉「#{@news.title2}」") %>
+      </li>
         <li>
           <%= link_to("Back Number ▷","/works") %>
         </li>
