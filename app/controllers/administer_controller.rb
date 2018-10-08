@@ -1,9 +1,13 @@
 class AdministerController < ApplicationController
 
-before_action ;
+  # before_action :admin_check,only: [:news, :create]
+  before_action :authenticate_admin_user!
 
   def news
   end
+
+
+
 
   def create
     @news = News.new(
