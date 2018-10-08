@@ -12,7 +12,7 @@
 				   <p><%= @user.email %></p>
 				　　　<%= link_to("編集","/users/edit") %>
 						 <% if current_user.admin? %>
-						  <%= link_to("news更新","/administer/news") %>
+						  <%= link_to("news更新","/administer/news") %></br>
 						  <%= link_to("管理者ページ","/admin") %>
 						 <% end %>
 
