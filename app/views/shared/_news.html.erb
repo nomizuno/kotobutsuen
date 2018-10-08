@@ -1,8 +1,8 @@
     <div class="news">
+      <% @news = News.order(created_at: :desc).take %>
+      <% unless  @news == nil %>
       <p>NEWS</p>
       <ul class="news-list">
-        <% @news = News.order(created_at: :desc).take %>
-        <% @post = Post.find_by(content: "#{@news.title2}") %>
         <li>
           <%= link_to("#{@news.title}","#{@news.url}",class:"",:target=>["_blank"]) %>
         </li>
@@ -13,4 +13,5 @@
           <%= link_to("Back Number ▷","/works") %>
         </li>
       </ul>
+      <% end %>
     </div>
