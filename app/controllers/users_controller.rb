@@ -14,15 +14,14 @@ class UsersController < ApplicationController
 
   def new
    @user = User.new
+  end
 
+
+
+ def edit
+  @user = User.find_by(id: params[:id])
+  @user.save
  end
-
-
-
-def edit
- @user = User.find_by(id: params[:id])
- @user.save
-end
 
 
 

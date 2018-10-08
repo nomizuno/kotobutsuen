@@ -1,14 +1,19 @@
 class AdministerController < ApplicationController
 
+  # before_action :admin_check,only: [:news, :create]
+  before_action :authenticate_admin_user!
 
-  def radio
+  def news
   end
+
+
+
 
   def create
     @news = News.new(
       title: params[:title],
-  	  usr: params[:url],
-  	  next: params[:next]
+  	  url: params[:url],
+  	  title2: params[:title2]
     )
     @news.save
     if   @news.save
