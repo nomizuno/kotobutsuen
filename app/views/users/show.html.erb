@@ -5,14 +5,19 @@
 		<div class ="user">
 			 <%= image_tag @user.avatar.url, class: "border rounded w-25" %>
 			<h2>@<%= @user.name %></h2>
-      <p><%= @user.userprofile %> </p>
+      <p><%= @user.userprofile %></p>
 			<div class ="user-edit-button">
-			  <% if user_signed_in? %>
+				<% if user_signed_in? %>
 				<% if @user.id == current_user.id %>
-				<p><%= @user.email %></p>
-				<%= link_to("編集","/users/edit") %>
-				<% end %>
-			<% end %>
+				   <p><%= @user.email %></p>
+				　　　<%= link_to("編集","/users/edit") %>
+						 <% if current_user.admin? %>
+						  <%= link_to("news更新","/administer/news") %>
+						  <%= link_to("管理者ページ","/admin") %>
+						 <% end %>
+
+				　<% end %>
+			　<% end %>
 			</div>
       <p>	<span class = "fa fa-heart like-btn"></span>の合計&nbsp<span class ="count"><%= @likes_count %></span></p>
 			<p>ことば投稿数&nbsp<span class ="count"><%= @post_count %></span></p>
